@@ -1,0 +1,498 @@
+% interactapasample.tex
+% v1.05 - August 2017
+
+\documentclass[]{interact}
+
+\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
+\usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
+\usepackage{url}
+\usepackage[hyphenbreaks]{breakurl}
+%\usepackage[nolists,tablesfirst]{endfloat}% To `separate' figures and tables from text if required
+%\usepackage[doublespacing]{setspace}% To produce a `double spaced' document if required
+%\setlength\parindent{24pt}% To increase paragraph indentation when line spacing is doubled
+
+% \usepackage[longnamesfirst,sort]{natbib}% Citation support using natbib.sty
+% \bibpunct[, ]{(}{)}{;}{a}{,}{,}% Citation support using natbib.sty
+% \renewcommand\bibfont{\fontsize{10}{12}\selectfont}% To set the list of references in 10 point font using natbib.sty
+
+\usepackage[natbibapa,nodoi]{apacite}% Citation support using apacite.sty. Commands using natbib.sty MUST be deactivated first!
+\setlength\bibhang{12pt}% To set the indentation in the list of references using apacite.sty. Commands using natbib.sty MUST be deactivated first!
+\renewcommand\bibliographytypesize{\fontsize{10}{12}\selectfont}% To set the list of references in 10 point font using apacite.sty. Commands using natbib.sty MUST be deactivated first!
+\def\UrlBreaks{\do\/\do-}
+
+\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
+
+\begin{document}
+
+\articletype{REGISTERED REPORT RESEARCH REPLICATION STUDY}% Specify the article type or omit as appropriate
+
+\title{An Empirical Replication of ``Computing in the curriculum:
+  Challenges and strategies from a teacher’s perspective''}
+
+\author{
+\name{Tom Crick\textsuperscript{a}\thanks{CONTACT Professor Tom
+    Crick. Email: thomas.crick@swansea.ac.uk} and Cathryn Knight\textsuperscript{a}}
+\affil{\textsuperscript{a}Swansea University, UK}
+}
+
+\maketitle
+
+% % a structured abstract (250 word max).  The journal requires a
+% Structured abstract for papers; for the stage 1 submission you will
+% supply background, objective and method, but leave the findings and
+% implications blank.
+\begin{abstract}
+{\emph{Background:}} There have been rapid changes to Computing
+education across all four nations of the UK over the past ten years.
+In 2014,~\citeauthor*{sentance+csizmadia:2017} investigated teachers’
+perceptions of the compulsory inclusion of Computing into the new
+national curriculum in England using a large-scale survey. The results
+of this national case study have been widely-cited in the literature,
+categorising approaches taken by Computing teachers to support
+students.  However, while~\citeauthor*{sentance+csizmadia:2017}'s
+\citeyear{sentance+csizmadia:2017} paper provides valuable insight
+into teachers’ perceptions from 2014, the data collected was largely
+from England. Therefore, it did not account for the devolved
+educational policy contexts across the UK, and the policy and practice
+changes in the interim.
+ 
+{\emph{Objective:}} The proposed project replicates the original study
+to find out both how perceptions have changed between 2014 and the
+present day, and to see how they may be further impacted by diverging
+UK Computing education policy and practice contexts. Furthermore, the
+replication will also include specific questions relating to the
+COVID-19 pandemic in order to better understand its impact on
+Computing education, and to control for any changes to learning,
+teaching and assessment that have taken place due to the pandemic.
+ 
+{\emph{Method:}} We propose an empirical replication
+of~\citeauthor*{sentance+csizmadia:2017}'s
+\citeyear{sentance+csizmadia:2017} original study, using the same
+online survey. Both quantitative and qualitative data will be
+collected in order to better understand the changes in teachers’
+perceptions toward Computing education, and identify any differences
+across the four nations of the UK.
+
+\end{abstract}
+
+\begin{keywords}
+Computer science education; in-service teacher education; computing
+curricula; registered report; replication study
+\end{keywords}
+
+
+% an introduction, in which the authors clearly justify the replication
+% of the original study and the specific aspects they will add or modify
+% to shed more light on the phenomenon studied. This section should also
+% include hypotheses about how the outcomes of the replication will
+% compare to the original study.
+\section{Introduction}
+
+In this Stage 1 Registered Report, we outline our proposal for the
+empirical replication of~\citeauthor*{sentance+csizmadia:2017}'s
+highly-cited\footnote{Citation metrics taken from Google Scholar:
+\url{https://scholar.google.com/scholar?cluster=5696382193951950255}
+(155 citations as of November 2020)} paper ``Computing in the
+curriculum: Challenges and strategies from a teacher’s
+perspective''\footnote{See:
+\url{https://doi.org/10.1007/s10639-016-9482-0}}, published in the
+Springer journal {\emph{Education and Information Technologies}
+in~\citeyear{sentance+csizmadia:2017}.
+
+Computing is being introduced into the curricula in many nations,
+regions and jurisdictions. Teachers’ perspectives of these major
+reforms allow us to discover and better understand what challenges --
+and opportunities -- this presents, and also the strategies teachers
+claim to be using in teaching the subject across primary
+and secondary (K-12) education. The study described in this paper was
+originally carried out in the United Kingdom (UK) in 2014, in the
+midst of major Information and Communication Technology (ICT) national
+curriculum reform in England, where teachers were preparing for the
+mandatory inclusion of Computing into the curriculum. We have since
+seen major national curriculum reforms published in Wales in January
+2020, alongside increased scrutiny of existing curricula in Scotland
+and Northern Ireland, as well as the quality and perceived value of
+technical school-leaver qualifications across all four nations.
+
+In 2014,~\citeauthor*{sentance+csizmadia:2017} launched a survey
+investigating teachers’ perceptions of the compulsory inclusion of
+Computing into the new national curriculum in England. N=1417
+respondents completed the wider survey (1126 of whom were practising
+teachers), with n=339 teachers contributing at least one free text
+answer to the free text questions. In the paper,
+~\citeauthor*{sentance+csizmadia:2017} primarily focused on the n=339
+responses given by this self-selecting group of teachers, but include
+reference to their other answers to survey questions where
+relevant. Using Likert-scale questions, they found that the majority
+of teachers (85\%) rated their confidence in being able to deliver the
+new curriculum at 6 or more out of 10~\citep{sentance+csizmadia:2017}.
+However, this statistic was reported from a subsample of the
+participants who answered open-ended questions about teaching
+Computing at school.
+
+Therefore, it is necessary to return to the 2014 data in order to
+determine the confidence levels within the wider sample of 1,126
+practicing teachers contacted through the Computing at School
+(CAS)\footnote{\url{https://www.computingatschool.org.uk/}} UK
+membership association. Within the qualitative data teachers reported
+a number of intrinsic and extrinsic challenges in teaching
+Computing. Statements made by teachers who are currently teaching
+Computing in school were coded, categorised and analysed, describing
+both successful strategies for teaching and the difficulties they
+face. These included the need to change teaching strategy in order to
+account for the differences between ICT and Computing; concerns over
+how to teach computational thinking; and, the need to develop
+resilience in students when learning programming. Overall, the paper
+offers guidance to teachers on how develop their Computing teaching
+skills. The results reported in the paper were timely and relevant to
+teachers and teacher educators in the field of Computing, especially
+during the midst of major national curriculum reform in England. Their
+recommendations include the need for further investigation to be
+carried out around the impact of the strategies suggested in primary
+and secondary education~\citep{sentance+csizmadia:2017}. Therefore,
+the replication of this study would also reinforce contributions to
+the area of pedagogical content knowledge (PCK) in Computing; PCK is
+the knowledge that a teacher has about how to teach their
+subject~\citep{shulman:1986}.
+
+Yet, while ~\citeauthor*{sentance+csizmadia:2017}'s
+\citeyear{sentance+csizmadia:2017} paper provided a valuable insight
+into UK teachers’ perceptions from 2014 (which has garnered significant
+international attention e.g.~\citet{nytcoding:2014}), the data
+collected was largely from England. Therefore, it largely did not
+account for the devolved educational policy context across the UK, and
+the policy and practice changes in the interim. Furthermore, while
+N=1,126 practicing teachers completed the survey, only n=339 completed the
+qualitative questions on which the findings were
+based. \citeauthor*{sentance+csizmadia:2017} note that the sample they
+draw upon ``may not be `typical' of the whole teacher population, but
+represent teachers who are more comfortable teaching Computing''
+(p. 477). This makes it difficult to generalise the results to the
+broader population of UK teachers. Therefore, a major justification
+for an empirical replication of this research study is to explore how
+opinions have changed between 2014 and now, and also to gather a more
+representative sample of practitioners from across the four nations of
+the UK in order to better understand the impacts of the differing and
+evolving policy and professional practice contexts.
+
+Through this empirical replication study, we anticipate a more
+granular response to the original survey instrument, reflecting the
+increased differences in Computing education policy and practice, as
+well as the divergence in national curricula and qualifications across
+the UK. However, we would anticipate a larger range of positive and
+negative responses, reflecting the challenges of recruiting, retaining
+and professionally developing Computing teachers across the UK,
+potentially developing distinct teacher grouping of ``haves'' and
+``have nots'' in their confidence and capability to deliver specific
+curriculum and qualifications. By aiming for a UK-representative
+survey sample, it would provide an opportunity for comparative
+thematic analysis between the four nations of the UK, to provide
+deeper insight that may be portable to other nations and
+jurisdictions.
+
+Finally, the impact of the COVID-19 pandemic on the wider education
+system, across all settings, has been
+profound~\citep{unescocovidedu:2020}, presenting significant
+challenges for learning, teaching and assessment
+(LT\&A)~\citep{oecd:2020}. Across the UK, there have been major
+responses from various governments, organisations and institutions at
+all levels and settings; from major national policy initiatives to
+support learners and maintain quality and standards across all
+settings, to ongoing government inquiries on the longer-term impact of
+COVID-19 on education and children’s services. Thus, we are keen to
+better understand the short and medium-term impact of COVID-19 on
+Computing educators at all levels and settings in the UK, given some
+of the specific disciplinary challenges of teaching Computing,
+building on recent work in this
+space~\citep{crick-et-al:ukicer2020,watermeyer-et-al:he2020}, as well
+as the opportunities for wider education system
+change~\citep{zhao:2020}; for example, the future of formal
+examinations and qualifications in the UK.
+
+\subsubsection*{A Note on Terminology}
+
+While in many instances throughout this paper we will refer to the UK
+-- consisting of the four nations of England, Scotland, Wales and
+Northern Ireland -- we will attempt to be as clear as possible when
+referring to specific policies or initiatives across or between the
+nations, as a number of policy areas, including education and skills,
+are devolved to the respective national governments.
+
+With regards to the consistent naming of the discipline through this
+paper, ``Computing'' is used as the subject name throughout this paper
+as well as in~\citet{sentance+csizmadia:2017}; it refers mainly to the
+computer science elements of the curriculum, and is also often
+referred to as Informatics in other countries.
+
+% a literature review, containing a summary of the relevant literature,
+% especially the literature which has been published since the
+% publication of the original paper.
+\section{Brief Literature Review}
+
+In addition to the review of the key literature
+in~\citet{sentance+csizmadia:2017}, including the theoretical framing,
+much has developed in a policy and practice context for Computing
+education across the UK.
+
+Computing has been introduced as a new subject in compulsory-level
+school curricula in many countries, with broad social, cultural and
+economic objectives~\citep{tuomi-et-al:2018}. This brings with it both
+excitement and challenges, as for any new subject; for teachers facing
+curriculum change, how to confidently teach it is very
+pertinent. Introducing new content does not merely mean that teachers
+have to equip themselves with new subject knowledge, which of course
+in many cases they
+do~\citep{brown-et-al-sigcse2013,sentance-et-al:2013,thompson+bell:2013,sentance+humphreys:2017}.
+Teachers also need to learn appropriate pedagogies for delivering a
+new subject, particularly in those aspects of computer science that
+relate to algorithms, programming and the development of computational
+thinking
+skills~\citep{davenport-et-al:latice2016,murphy-et-al:programming2017,kong-et-el:2020}.
+
+The UK has seen rapid change -- in both curricula and qualifications
+-- in the area of computer science education in recent years, across
+all four nations of the
+UK~\citep{brown-et-al-sigcse2013,brown-et-al-toce2014,cutts-et-al:2017,moller+crick:jce2018},
+with education being a devolved responsibility for the individual
+governments, parliaments and assemblies. Before the major national
+curriculum reforms from September 2014, many schools and teachers in
+England had implemented elements of the new Computing curriculum prior
+to the official starting date of the Computing Programme of
+Study~\citep{dfecomputingpos:2013} in September 2014, as a void was
+left by the disapplication of the existing curriculum subject, ICT, in
+January 2012~\citep{brown-et-al-toce2014}. We have also seen major
+curriculum reforms in Wales, published in January 2020, with
+substantial shifts from ICT to Computing, the recognition of statutory
+cross-curricular digital competencies, and the development of a new
+Science \& Technology area of learning and
+experience~\citep{cfw:2020}. Alongside these curricula reforms, we
+have also seen significant changes to the available technical
+school-leaver qualifications, taken at the ages of 16 and 18.
+
+Recent literature relating to Computing education in school
+highlights a number of ways of making computer science concepts
+accessible, engaging and fun, and more importantly, giving students a
+deep understanding of these concepts. This should be grounded in
+appropriate educational theory and methods, directly supporting
+effective professional practice. Thus, the implementation of a new
+Computing curriculum involves a change to teachers’
+practice~\citep{thompson+bell:2013,sentance+humphreys:2017,
+moller+crick:jce2018} across both their subject knowledge and
+pedagogical knowledge. With respect to the introduction of technology
+in classrooms, a different context, it can be seen that there is an
+intersection between teachers’ knowledge, beliefs and
+culture~\citep{ertner+ottenbreit-leftwich:2010,voogt+mckenney:2017}
+and this may indeed be the same for Computing. This further draws on
+the work of~\citet{finger+houguet:2009} who, also working in the area
+of adoption of technology into the curriculum, describe a range of
+intrinsic and extrinsic challenges that teachers face in moving from
+the intended to the implemented
+curriculum~\citep{vandenakker:2004,vinnervik:2020}.
+
+Prior to the work of ~\citet{sentance+csizmadia:2017},
+\citet{black-et-al:2013} carried out a study in the UK where they
+asked Computing teachers how they felt they could make the subject
+interesting. The key aspects that they identified were the importance
+to teachers of making Computing fun and relevant. In carrying out this
+replication study, we are interested to see whether the teachers’
+comments aligned with both the \citeauthor*{black-et-al:2013} and
+\citeauthor*{sentance+csizmadia:2017} studies; we thus wish to
+further validate actual strategies that teachers use in their
+classroom that they feel to be most effective for teaching Computing.
+
+In a similar way to the \citet{black-et-al:2013} study, this
+replication study of \citet{sentance+csizmadia:2017} will focus purely
+on the teacher’s perspective in addressing these important
+questions. \citet{diethelm-et-al:2012} emphasise the importance of the
+teacher’s perspective to our understanding of computer science
+education as the teacher ``may work on many different abstraction
+levels or apply very different teaching methods for the same topic of
+the curriculum'' (p. 167), which is reaffirmed by later
+work~\citep{bender-et-al:2015,hubbard:2018}. We wish to identify what
+these methods are, in particular identifying common themes that may
+help to provide guidance for teachers new to teaching the subject, as
+well as providing actual examples of teachers using effective
+strategies as we enter a phase of education where more and more
+students are studying Computing in school, across all four nations of
+the UK, with significant opportunities to shape evolving Computing
+education policy and practice.
+
+% a method section, defining the type of replication that will be used
+% (see below), clearly distinguishing between the materials/approaches
+% of the original study and the additions of the replication study.
+\section{Methods}
+
+We propose an empirical replication of the original study
+from~\citet{sentance+csizmadia:2017}. We have secured access from the
+authors to the original survey, and both the quantitative and
+qualitative data to be able to provide comparative analysis to the
+2014 results.
+
+Further to the two research questions outlined in ~\citet{sentance+csizmadia:2017}:
+
+\begin{itemize}
+\item {\emph{What pedagogical strategies do teachers report work well for teaching
+computer science in school?}}
+
+\item {\emph{What challenges do teachers report that they face?}}
+\end{itemize}
+
+We propose the following three additional research questions as part of this
+empirical replication study:
+
+\begin{itemize}
+\item How have teachers' perceptions of Computing in the curriculum changed
+between 2014 and 2021?
+
+\item How do teachers’ perceptions of Computing in the curriculum differ by
+UK country?
+
+\item Has COVID-19 had an impact on teachers’ perceptions and confidence
+teaching Computing?
+\end{itemize}
+
+\subsection{Sample}
+
+Replicating the original study, this research will use an online
+survey targeting the UK membership of the Computing at School (CAS) UK
+network, as well as convenience sampling through social media
+platforms such as Twitter and LinkedIn. Furthermore, in order to
+ensure a representative sample from across the UK, CAS-related
+networks to CAS will be used in Wales, Scotland and Northern Ireland
+through professional contacts and policy links.
+
+\subsection{Survey}
+
+The data will be collected using the Qualtrics online survey
+software. The survey will follow the same structure as was used
+in~\citet{sentance+csizmadia:2017}, therefore it will collect
+demographic questions, followed by the same Likert and open-ended
+questions. Furthermore, in order to address the research question on
+whether there has been an impact of COVID-19 on teaching Computing,
+the survey will contain questions specifically relating to whether the
+rapid transition to online learning, teaching and assessment has
+impacted teacher confidence in teaching Computing.
+
+\subsection{Original survey}
+
+The data from the original~\citet{sentance+csizmadia:2017} survey will
+be used in order to determine whether there are significant
+differences between the original 2014 data, and the new survey data. Both
+quantitative and qualitative data has been provided by the original
+authors in order to undertake this analysis.
+
+% a plan of analyses, outlining the original analyses and the newly
+% planned analyses. Quantitative replications should also include a
+% power analysis in this section.
+\section{Plan of Analyses}
+
+\subsection{Quantitative analysis}
+
+In order to understand whether there is a significant difference
+between the original data from 2014 and the current survey, bivariate
+time 1 to time 2 analysis will be conducted. The data for this
+analysis will be weighted post-hoc to ensure that the demographics
+mirror the demographics of the original survey. T-tests will be used
+to determine differences in how the amount of time teaching Computing
+has changed since~\citeauthor*{sentance+csizmadia:2017} originally collected
+the data. Chi-square tests ($\chi^2$) will be used to see if there is
+a significant difference between the confidence levels of teachers
+between time 1 and time 2.
+
+Secondly, to determine differences between countries of the UK,
+$\chi^2$ tests will be used to compare confidence levels. $\chi^2$
+tests will determine whether educators in each country are
+significantly more or less likely to state that they are confident
+teaching Computing.
+
+Finally, to understand the impact of COVID-19 on teacher confidence,
+univariate and bivariate $\chi^2$ analysis will be used to present the
+results of the COVID-19 specific questions and to understand whether
+there was significant difference in responses based on respondent
+demographic and country.
+
+For all quantitative analysis significance will be indicated by a p
+value $<0.05$.
+
+\subsection{Qualitative Analysis}
+
+In the original study, the following open-ended survey questions were
+used to gather qualitative data from practitioners on Computing in the curriculum:  
+
+\begin{enumerate}
+\item {\emph{What good techniques/strategies have you found for helping
+students to understand programming?}}
+
+\item {\emph{Please describe any good techniques/strategies you use for
+helping students to understand other aspects of Computing?}}
+
+\item {\emph{What difficulties, if any, have you experienced teaching
+programming?}}
+
+\item {\emph{What difficulties, if any, have you experienced teaching other
+aspects of Computing?}}
+\end{enumerate}
+
+Using a similar method to~\citeauthor*{sentance+csizmadia:2017}, the
+qualitative data will be coded and placed into themes. However, rather
+than using a bottom-up method of coding, original themes from
+~\citet{sentance+csizmadia:2017} will be identified in the data. Where
+an entry does not fit the original code, a new code will be
+generated. This will allow for comparisons between the 2014 and 2021
+data. The data will be coded twice and inter-rater reliability using
+the Kappa statistic will be performed.
+
+% risks to the study, including: whether the funding/means to conduct
+% the study is already secured or is pending, the current status of the
+% ethics application, and any likely barriers to completing the study
+% before the end of 2021 (see timeline below).
+\section{Risks}
+
+This project has already received ethics approval through Swansea
+University's Faculty of Social Sciences and Humanities ethics board
+(approval reference: {\emph{SU-Ethics-Staff-151120/295}}). No funding
+is being sought for this research, and there is no dependence on
+employing additional researchers to complete this proposed
+replication.
+
+One identified risk to the proposed replication study is related to
+the current environment in which the data will be collected, due to
+the ongoing COVID-19 context. It is possible that compulsory
+(school-level) education may again return to online learning, teaching
+and assessment due to the continued impact of COVID-19, and that the
+approach may differ across the four nations of the
+UK~\citep{crick-et-al:ukicer2020,watermeyer-et-al:he2020}. These
+different educational environment contexts may impact the responses to
+the questions; however, it is anticipated that by asking specific
+additional questions about the impact of COVID-19 that this effect can
+be identified in the in the analysis and be controlled for.
+
+Finally, we intend to obtain a UK-representative sample for this
+replication study, but this may not be possible due to the chosen
+sampling methods and prevailing COVID-related factors. Furthermore, we
+will again recruit teachers through the CAS UK network, who already
+have access to a lively and supportive grass-roots community of
+teachers with whom they can exchange ideas and classroom resources. To
+mitigate this, we will also attempt to recruit participants outside of
+the (predominantly English) CAS membership, using similar professional
+networks in Scotland, Wales and Northern Ireland, as well as using
+convenience sample via social media (for example, Twitter and
+LinkedIn).
+
+% BibTeX
+\bibliographystyle{apacite}
+\bibliography{cse_rrrs_2021}
+
+\end{document}
